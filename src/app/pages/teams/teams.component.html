@@ -1,0 +1,52 @@
+<div class="teams-page">
+  <section class="page-header">
+    <div class="container">
+      <h1>Unsere Teams</h1>
+      <p>Von Junioren bis Senioren - Leidenschaft auf jedem Level</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="teams-grid">
+      <div class="team-card" *ngFor="let team of teams" (click)="selectTeam(team)" [class.active]="selectedTeam?.id === team.id">
+        <div class="team-image" [style.background-image]="'url(' + team.image + ')'"></div>
+        <div class="team-info">
+          <span class="team-category">{{ team.category }}</span>
+          <h2>{{ team.name }}</h2>
+          <p>{{ team.description }}</p>
+          <div class="coach-info">
+            <strong>Trainer:</strong> {{ team.coach }}
+          </div>
+          <button class="expand-button">
+            {{ selectedTeam?.id === team.id ? 'Weniger anzeigen' : 'Kader anzeigen' }}
+          </button>
+        </div>
+
+        <div class="team-roster" *ngIf="selectedTeam?.id === team.id">
+          <h3>Kader</h3>
+          <div class="players-grid">
+            <div class="player-card" *ngFor="let player of team.players">
+              <div class="player-number">{{ player.number }}</div>
+              <div class="player-info">
+                <div class="player-name">{{ player.name }}</div>
+                <div class="player-position">{{ player.position }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="join-section">
+    <div class="container">
+      <div class="join-content">
+        <h2>Interesse am Floorball?</h2>
+        <p>Wir suchen immer motivierte Spielerinnen und Spieler für unsere Teams. Vom Anfänger bis zum erfahrenen Spieler - bei uns ist jeder willkommen!</p>
+        <div class="contact-info">
+          <p><strong>Kontakt:</strong> training&#64;fc-floorball.ch | +41 79 123 45 67</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

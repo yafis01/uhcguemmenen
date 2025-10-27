@@ -1,0 +1,252 @@
+.officials-page {
+  width: 100%;
+}
+
+.page-header {
+  background: linear-gradient(135deg, #1a2a6c 0%, #b21f1f 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.section-spacing {
+  padding: 2rem 1.5rem;
+}
+
+.category-section {
+  margin-bottom: 5rem;
+}
+
+.category-title {
+  color: #1a2a6c;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.category-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #b21f1f, #fdbb2d);
+  border-radius: 2px;
+}
+
+.category-description {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.officials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.official-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.official-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.official-image {
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.official-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+}
+
+.official-info {
+  padding: 1.5rem;
+}
+
+.official-info h3 {
+  color: #1a2a6c;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.official-role {
+  color: #b21f1f;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.official-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  min-height: 60px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #333;
+  text-decoration: none;
+  padding: 0.6rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.contact-link:hover {
+  background: #f8f8f8;
+  transform: translateX(5px);
+}
+
+.contact-link .icon {
+  font-size: 1.2rem;
+  width: 30px;
+  text-align: center;
+}
+
+.contact-link.email:hover {
+  color: #1a2a6c;
+}
+
+.contact-link.phone:hover {
+  color: #b21f1f;
+}
+
+.contact-section {
+  background: linear-gradient(135deg, rgba(26, 42, 108, 0.05), rgba(178, 31, 31, 0.05));
+  padding: 4rem 0;
+}
+
+.contact-box {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-box h2 {
+  color: #1a2a6c;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-box p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.general-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.contact-item {
+  padding: 1rem;
+  background: #f8f8f8;
+  border-radius: 10px;
+  border-left: 4px solid #b21f1f;
+}
+
+.contact-item strong {
+  display: block;
+  color: #1a2a6c;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.contact-item a {
+  color: #b21f1f;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.contact-item a:hover {
+  color: #1a2a6c;
+  text-decoration: underline;
+}
+
+.contact-item span {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .category-title {
+    font-size: 2rem;
+  }
+
+  .officials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-box {
+    padding: 2rem;
+  }
+
+  .contact-box h2 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,56 @@
+<div class="history-page">
+  <section class="page-header">
+    <div class="container">
+      <h1>Unsere Geschichte</h1>
+      <p>30 Jahre Leidenschaft, Erfolg und Gemeinschaft</p>
+    </div>
+  </section>
+
+  <section class="achievements-section">
+    <div class="container">
+      <div class="achievements-grid">
+        <div class="achievement-card" *ngFor="let achievement of achievements">
+          <div class="achievement-count">{{ achievement.count }}</div>
+          <div class="achievement-title">{{ achievement.title }}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container timeline-section">
+    <h2 class="section-title">Meilensteine</h2>
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let milestone of milestones; let i = index" [class.left]="i % 2 === 0" [class.right]="i % 2 !== 0">
+        <div class="timeline-content" [attr.data-type]="milestone.type">
+          <div class="year-badge">{{ milestone.year }}</div>
+          <div class="milestone-card">
+            <div class="milestone-image" *ngIf="milestone.image" [style.background-image]="'url(' + milestone.image + ')'"></div>
+            <div class="milestone-text">
+              <h3>{{ milestone.title }}</h3>
+              <p>{{ milestone.description }}</p>
+            </div>
+            <div class="type-badge" [ngClass]="milestone.type">
+              {{ milestone.type === 'foundation' ? 'Gründung' : milestone.type === 'achievement' ? 'Erfolg' : 'Entwicklung' }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="legacy-section">
+    <div class="container">
+      <div class="legacy-content">
+        <h2>Unser Vermächtnis</h2>
+        <p>Seit über 30 Jahren steht der FC Floorball für Exzellenz im Sport, starke Gemeinschaft und kontinuierliche Entwicklung. Was als kleine Gruppe von Enthusiasten begann, ist heute einer der führenden Floorball-Clubs der Region.</p>
+        <p>Unsere Geschichte ist geprägt von Erfolgen auf dem Spielfeld, aber auch von der Entwicklung zahlreicher Talente und dem Aufbau einer starken Vereinsgemeinschaft. Wir sind stolz auf das, was wir erreicht haben, und blicken mit Zuversicht in die Zukunft.</p>
+        <div class="quote">
+          <blockquote>
+            "Der Erfolg eines Vereins misst sich nicht nur in Titeln, sondern an der Gemeinschaft, die er aufbaut."
+          </blockquote>
+          <cite>- Gründungsmitglied, 1995</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
