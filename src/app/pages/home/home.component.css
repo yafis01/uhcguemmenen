@@ -3,8 +3,9 @@
 }
 
 .hero {
-  background: linear-gradient(135deg, rgba(26, 42, 108, 0.9) 0%, rgba(178, 31, 31, 0.9) 50%, rgba(253, 187, 45, 0.9) 100%),
-              url('https://images.pexels.com/photos/209841/pexels-photo-209841.jpeg?auto=compress&cs=tinysrgb&w=1200') center/cover;
+  background:
+    linear-gradient(135deg, rgba(26, 42, 108, 0.2) 0%, rgba(26, 42, 108, 0.2) 100%),
+    url('../../../assets/unihockey-home.jpg') center/cover no-repeat;
   height: 500px;
   display: flex;
   align-items: center;

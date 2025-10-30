@@ -1,15 +1,15 @@
 <div class="officials-page">
   <section class="page-header">
     <div class="container">
-      <h1>Funktionäre</h1>
-      <p>Das Team hinter dem Erfolg</p>
+      <!--<h1>Funktionäre</h1>
+      <p>Das Team hinter dem Erfolg</p>-->
     </div>
   </section>
 
   <section class="container section-spacing">
     <div class="category-section">
       <h2 class="category-title">Vorstand</h2>
-      <p class="category-description">Unser Vorstand leitet den Verein mit strategischer Weitsicht und großem Engagement.</p>
+      <p class="category-description">Unser Vorstand leitet den Verein mit strategischer Weitsicht und grossem Engagement.</p>
       <div class="officials-grid">
         <div class="official-card" *ngFor="let official of boardMembers">
           <div class="official-image" [style.background-image]="'url(' + official.image + ')'"></div>
@@ -17,7 +17,7 @@
             <h3>{{ official.name }}</h3>
             <div class="official-role">{{ official.role }}</div>
             <p class="official-description">{{ official.description }}</p>
-            <div class="contact-details">
+            <!-- <div class="contact-details">
               <a [href]="'mailto:' + official.email" class="contact-link email">
                 <span class="icon">✉</span>
                 {{ official.email }}
@@ -26,57 +26,7 @@
                 <span class="icon">📞</span>
                 {{ official.phone }}
               </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="category-section">
-      <h2 class="category-title">Trainer</h2>
-      <p class="category-description">Unsere erfahrenen Trainer entwickeln Talente und führen Teams zum Erfolg.</p>
-      <div class="officials-grid">
-        <div class="official-card" *ngFor="let official of coaches">
-          <div class="official-image" [style.background-image]="'url(' + official.image + ')'"></div>
-          <div class="official-info">
-            <h3>{{ official.name }}</h3>
-            <div class="official-role">{{ official.role }}</div>
-            <p class="official-description">{{ official.description }}</p>
-            <div class="contact-details">
-              <a [href]="'mailto:' + official.email" class="contact-link email">
-                <span class="icon">✉</span>
-                {{ official.email }}
-              </a>
-              <a *ngIf="official.phone" [href]="'tel:' + official.phone" class="contact-link phone">
-                <span class="icon">📞</span>
-                {{ official.phone }}
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="category-section">
-      <h2 class="category-title">Mitarbeiter</h2>
-      <p class="category-description">Unser Support-Team sorgt für reibungslose Abläufe im Hintergrund.</p>
-      <div class="officials-grid">
-        <div class="official-card" *ngFor="let official of staff">
-          <div class="official-image" [style.background-image]="'url(' + official.image + ')'"></div>
-          <div class="official-info">
-            <h3>{{ official.name }}</h3>
-            <div class="official-role">{{ official.role }}</div>
-            <p class="official-description">{{ official.description }}</p>
-            <div class="contact-details">
-              <a [href]="'mailto:' + official.email" class="contact-link email">
-                <span class="icon">✉</span>
-                {{ official.email }}
-              </a>
-              <a *ngIf="official.phone" [href]="'tel:' + official.phone" class="contact-link phone">
-                <span class="icon">📞</span>
-                {{ official.phone }}
-              </a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

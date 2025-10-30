@@ -3,19 +3,34 @@
 }
 
 .page-header {
-  background: linear-gradient(135deg, #1a2a6c 0%, #b21f1f 100%);
-  color: white;
   padding: 4rem 0;
   text-align: center;
+  color: white;
+
+  background-image:
+    url('../../../assets/bruecke-3.PNG');
+  background-repeat: repeat-x, no-repeat;
+  background-size: auto 100%, cover;
+  background-position: center, center;
 }
 
 .page-header h1 {
+  color: #222222; /* dunkles Grau für Kontrast */
   font-size: 3rem;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(255,255,255,0.2), /* leichter Lichtschatten */
+               2px 2px 4px rgba(0,0,0,0.5);       /* dunkler Schatten */
+  margin: 0 0 1rem 0;
 }
 
 .page-header p {
+  color: #eeeeee; /* leichter Kontrast, nicht zu hell */
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.page-header p {
+  color: #222222;
   font-size: 1.2rem;
   opacity: 0.9;
 }

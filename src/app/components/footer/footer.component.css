@@ -1,0 +1,16 @@
+.footer {
+  background-color: #1a2a6c; /* Dunkles Blau */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
