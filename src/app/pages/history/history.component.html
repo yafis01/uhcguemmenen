@@ -1,10 +1,13 @@
 <div class="history-page">
-  <section class="page-header">
-    <div class="container">
-      <h1>Unsere Geschichte</h1>
-      <p>30 Jahre Leidenschaft, Erfolg und Gemeinschaft</p>
-    </div>
-  </section>
+    <section class="page-header">
+        <div class="container">
+        </div>
+    </section>
+    <section class="container section-spacing">
+        <div class="category-section">
+            <h2 class="category-title">Geschichte</h2>
+        </div>
+    </section>
 
   <section class="achievements-section">
     <div class="container">
@@ -30,7 +33,7 @@
               <p>{{ milestone.description }}</p>
             </div>
             <div class="type-badge" [ngClass]="milestone.type">
-              {{ milestone.type === 'foundation' ? 'Gründung' : milestone.type === 'achievement' ? 'Erfolg' : 'Entwicklung' }}
+              {{ milestone.type === 'foundation' ? 'Ereignis' : milestone.type === 'achievement' ? 'Erfolg' : 'Entwicklung' }}
             </div>
           </div>
         </div>

@@ -11,18 +11,18 @@
     <div class="section-header">
       <h2>Aktuelle News</h2>
     </div>
-    <div class="news-grid">
-      <article class="news-card" *ngFor="let item of news">
-        <div class="news-image" [style.background-image]="'url(' + item.image + ')'"></div>
-        <div class="news-content">
-          <span class="news-date">{{ item.date }}</span>
-          <h3>{{ item.title }}</h3>
-          <p>{{ item.summary }}</p>
-        </div>
+      <article class="news-card" *ngFor="let item of news" [routerLink]="item.link" style="cursor: pointer;">
+          <div class="news-image" [style.background-image]="'url(' + item.image + ')'"></div>
+          <div class="news-content">
+              <span class="news-date">{{ item.date }}</span>
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.summary }}</p>
+          </div>
       </article>
-    </div>
+
   </section>
 
+<!--
   <section class="matches-section">
     <div class="container">
       <div class="section-header">
@@ -46,26 +46,27 @@
       </div>
     </div>
   </section>
+-->
 
   <section class="container info-section">
     <div class="info-grid">
       <div class="info-card">
         <div class="info-icon">🏆</div>
-        <h3>Erfolge</h3>
-        <p>Zahlreiche Meistertitel und Pokale in unserer über 30-jährigen Geschichte</p>
+        <h3>Geschichte</h3>
+        <p>Unsere Meilensteine & Erfolge</p>
         <a routerLink="/history" class="link-button">Mehr erfahren</a>
       </div>
       <div class="info-card">
         <div class="info-icon">👥</div>
         <h3>Teams</h3>
-        <p>Von Junioren bis Senioren - bei uns findet jeder sein Team</p>
-        <a routerLink="/teams" class="link-button">Teams ansehen</a>
+        <p>Überblick über unsere Mannschaften</p>
+        <a routerLink="/teams" class="link-button">Mehr erfahren</a>
       </div>
       <div class="info-card">
         <div class="info-icon">🎯</div>
-        <h3>Funktionäre</h3>
-        <p>Engagiertes Management und erfahrene Trainer für optimale Betreuung</p>
-        <a routerLink="/officials" class="link-button">Kontakt aufnehmen</a>
+        <h3>Vorstand</h3>
+        <p>Funktionäre unseres Vereines</p>
+        <a routerLink="/officials" class="link-button">Mehr erfahren</a>
       </div>
     </div>
   </section>

@@ -10,6 +10,7 @@ interface Official {
   phone?: string;
   image: string;
   description: string;
+  zitat: string;
 }
 
 @Component({
@@ -29,7 +30,8 @@ export class OfficialsComponent {
       email: '-',
       phone: '-',
       image: '../../../assets/default-profile.png',
-      description: 'Leitet den Verein seit 2015 mit großem Engagement und strategischer Weitsicht.'
+      description: 'Leitet den Verein mit Engagement und sorgt für eine erfolgreiche strategische Ausrichtung.',
+      zitat: 'Make UHC Gümmenen great again.'
     },
     {
       id: 2,
@@ -39,7 +41,8 @@ export class OfficialsComponent {
       email: '-',
       phone: '-',
       image: '../../../assets/default-profile.png',
-      description: 'Verantwortlich für Öffentlichkeitsarbeit und Sponsoring.'
+      description: 'Organisiert Training, Spiele und Turniere für alle Teams.',
+      zitat: ''
     },
     {
       id: 3,
@@ -48,16 +51,18 @@ export class OfficialsComponent {
       category: 'board',
       email: '-',
       image: '../../../assets/default-profile.png',
-      description: 'Verwaltet die Vereinsfinanzen mit Präzision und Transparenz.'
+      description: 'Verantwortlich für die finanzielle Planung und eine nachhaltige Vereinsführung.',
+      zitat: 'Sorry, I ain\'t got no money, I\'m not trying to be funny.'
     },
     {
       id: 4,
       name: 'Yanis Fischer',
-      role: 'Sekretariat',
+      role: 'Sekretariat & Webseite',
       category: 'board',
       email: '-',
       image: '../../../assets/default-profile.png',
-      description: 'Zuständig für Protokolle und administrative Angelegenheiten.'
+      description: 'Kümmert sich um Kommunikation, Administration und Mitgliederanliegen.',
+      zitat: 'Back office for success.'
     },
     {
       id: 4,
@@ -66,7 +71,8 @@ export class OfficialsComponent {
       category: 'board',
       email: '-',
       image: '../../../assets/default-profile.png',
-      description: 'Zuständig für Protokolle und administrative Angelegenheiten.'
+      description: 'Sorgt mit Getränken (Bier) und Snacks für das leibliche Wohl bei unseren Spielen und Anlässen.',
+      zitat: 'In heaven there is no beer, that\'s why we drink it here.'
     }
   ];
 }

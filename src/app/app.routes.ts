@@ -6,6 +6,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent)
   },
   {
+    path: 'events',
+    loadComponent: () => import('./pages/event/event.component').then(m => m.EventComponent)
+  },
+  {
     path: 'teams',
     loadComponent: () => import('./pages/teams/teams.component').then(m => m.TeamsComponent)
   },
@@ -16,6 +20,10 @@ export const routes: Routes = [
   {
     path: 'officials',
     loadComponent: () => import('./pages/officials/officials.component').then(m => m.OfficialsComponent)
+  },
+  {
+    path: 'contact',
+    loadComponent: () => import('./pages/contact/contact.component').then(m => m.ContactComponent)
   },
   {
     path: '**',

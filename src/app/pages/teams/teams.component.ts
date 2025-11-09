@@ -44,54 +44,6 @@ export class TeamsComponent {
         { number: 20, name: 'Patrick Schneider', position: 'Angriff' }
       ]
     },
-    {
-      id: 2,
-      name: 'Damen',
-      category: 'Damen',
-      description: 'Unser Damenteam besteht aus talentierten Spielerinnen mit viel Leidenschaft.',
-      coach: 'Sandra Keller',
-      image: 'https://images.pexels.com/photos/8007461/pexels-photo-8007461.jpeg?auto=compress&cs=tinysrgb&w=800',
-      players: [
-        { number: 1, name: 'Laura Zimmermann', position: 'Torwart' },
-        { number: 4, name: 'Anna Koch', position: 'Verteidigung' },
-        { number: 6, name: 'Julia Richter', position: 'Verteidigung' },
-        { number: 9, name: 'Sarah Klein', position: 'Mittelfeld' },
-        { number: 11, name: 'Lisa Wolf', position: 'Mittelfeld' },
-        { number: 13, name: 'Nina Schröder', position: 'Angriff' },
-        { number: 17, name: 'Emma Neumann', position: 'Angriff' }
-      ]
-    },
-    {
-      id: 3,
-      name: 'U16 Junioren',
-      category: 'Junioren',
-      description: 'Unsere U16 ist die Zukunft des Clubs mit großem Entwicklungspotenzial.',
-      coach: 'Martin Huber',
-      image: 'https://images.pexels.com/photos/46798/the-ball-stadion-horn-corner-46798.jpeg?auto=compress&cs=tinysrgb&w=800',
-      players: [
-        { number: 1, name: 'Leon Braun', position: 'Torwart' },
-        { number: 3, name: 'Felix Hartmann', position: 'Verteidigung' },
-        { number: 8, name: 'Tim Lang', position: 'Mittelfeld' },
-        { number: 11, name: 'Noah Schmitt', position: 'Mittelfeld' },
-        { number: 14, name: 'Lukas Schulz', position: 'Angriff' },
-        { number: 19, name: 'Moritz Zimmermann', position: 'Angriff' }
-      ]
-    },
-    {
-      id: 4,
-      name: 'U12 Junioren',
-      category: 'Junioren',
-      description: 'Die jüngsten Talente lernen hier die Grundlagen des Floorball-Sports.',
-      coach: 'Peter Vogel',
-      image: 'https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=800',
-      players: [
-        { number: 1, name: 'Max Becker', position: 'Torwart' },
-        { number: 2, name: 'Paul Lehmann', position: 'Verteidigung' },
-        { number: 5, name: 'Jonas Krause', position: 'Mittelfeld' },
-        { number: 7, name: 'Ben Müller', position: 'Mittelfeld' },
-        { number: 9, name: 'Finn Werner', position: 'Angriff' }
-      ]
-    }
   ];
 
   selectedTeam: Team | null = null;

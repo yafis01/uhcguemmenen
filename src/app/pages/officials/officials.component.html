@@ -1,15 +1,13 @@
 <div class="officials-page">
   <section class="page-header">
     <div class="container">
-      <!--<h1>Funktionäre</h1>
-      <p>Das Team hinter dem Erfolg</p>-->
     </div>
   </section>
 
   <section class="container section-spacing">
     <div class="category-section">
       <h2 class="category-title">Vorstand</h2>
-      <p class="category-description">Unser Vorstand leitet den Verein mit strategischer Weitsicht und grossem Engagement.</p>
+     <!-- <p class="category-description">Unser Vorstand leitet den Verein mit strategischer Weitsicht und grossem Engagement.</p> -->
       <div class="officials-grid">
         <div class="official-card" *ngFor="let official of boardMembers">
           <div class="official-image" [style.background-image]="'url(' + official.image + ')'"></div>
@@ -17,6 +15,7 @@
             <h3>{{ official.name }}</h3>
             <div class="official-role">{{ official.role }}</div>
             <p class="official-description">{{ official.description }}</p>
+            <i class="official-description">{{ official.zitat }}</i>
             <!-- <div class="contact-details">
               <a [href]="'mailto:' + official.email" class="contact-link email">
                 <span class="icon">✉</span>
@@ -27,29 +26,6 @@
                 {{ official.phone }}
               </a>
             </div> -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact-section">
-    <div class="container">
-      <div class="contact-box">
-        <h2>Kontaktieren Sie uns</h2>
-        <p>Haben Sie Fragen oder möchten Sie Teil unseres Teams werden? Wir freuen uns auf Ihre Nachricht!</p>
-        <div class="general-contact">
-          <div class="contact-item">
-            <strong>Allgemeine Anfragen:</strong>
-            <a href="mailto:info&#64;fc-floorball.ch">info&#64;fc-floorball.ch</a>
-          </div>
-          <div class="contact-item">
-            <strong>Telefon:</strong>
-            <a href="tel:+41442345678">+41 44 234 56 78</a>
-          </div>
-          <div class="contact-item">
-            <strong>Adresse:</strong>
-            <span>Sportplatz 12, 8000 Zürich</span>
           </div>
         </div>
       </div>
