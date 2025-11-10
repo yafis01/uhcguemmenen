@@ -1,5 +1,6 @@
+/* === HEADER BASIS === */
 header {
-  background: #449fc1; /* hellblau */
+  background: #449fc1;
   color: white;
   padding: 0.8rem 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
@@ -17,7 +18,7 @@ header {
   align-items: center;
 }
 
-/* --- LOGO --- */
+/* === LOGO === */
 .logo {
   display: flex;
   align-items: center;
@@ -34,16 +35,15 @@ header {
   margin: 0;
   font-size: 1.5rem;
   font-weight: 700;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .logo .tagline {
   font-size: 0.8rem;
-  opacity: 0.9;
   display: block;
+  opacity: 0.9;
 }
 
-/* --- NAVIGATION --- */
+/* === NAVIGATION (Desktop) === */
 nav {
   display: flex;
   gap: 1.5rem;
@@ -65,10 +65,9 @@ nav a:hover {
 
 nav a.active {
   background: rgba(255, 255, 255, 0.3);
-  font-weight: 600;
 }
 
-/* --- INSTAGRAM ICON --- */
+/* === INSTAGRAM ICON === */
 .social a {
   color: white;
   font-size: 1.6rem;
@@ -76,10 +75,10 @@ nav a.active {
 }
 
 .social a:hover {
-  color: #ffd700; /* goldener Hover-Effekt */
+  color: #ffd700;
 }
 
-/* --- BURGER MENU --- */
+/* === BURGER MENU BUTTON === */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -87,62 +86,79 @@ nav a.active {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  z-index: 1100;
 }
 
 .menu-toggle span {
   display: block;
-  width: 25px;
+  width: 26px;
   height: 3px;
   background: white;
+  border-radius: 3px;
   transition: all 0.3s ease;
 }
 
+/* Animation beim Öffnen */
 .menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
+  transform: rotate(45deg) translate(5px, 6px);
 }
-
 .menu-toggle.active span:nth-child(2) {
   opacity: 0;
 }
-
 .menu-toggle.active span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* --- RESPONSIVE DESIGN --- */
+/* === MOBILE DESIGN === */
 @media (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background: rgba(34, 123, 168, 0.97);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    transition: height 0.4s ease;
+    z-index: 1000;
+  }
+
+  nav.open {
+    height: 100vh;
+  }
+
+  nav a {
+    font-size: 1.3rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem;
+  }
+
   .menu-toggle {
     display: flex;
   }
 
-  nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #2196f3;
-    flex-direction: column;
-    gap: 0;
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-
-  nav.open {
-    max-height: 300px;
-    padding: 1rem 0;
-  }
-
-  nav a {
-    padding: 1rem;
-    text-align: center;
-  }
-
   .social {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  /* Navigation standardmäßig ausgeblendet */
+  nav:not(.open) a {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Sanftes Einblenden bei geöffnetem Menü */
+  nav.open a {
+    opacity: 1;
+    transition: opacity 0.4s ease 0.1s;
   }
 }

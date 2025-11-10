@@ -70,8 +70,18 @@ export class OfficialsComponent {
       role: 'Buvette',
       category: 'board',
       email: '-',
-      image: '../../../assets/default-profile.png',
+      image: '../../../assets/officials/mueller.jpg',
       description: 'Sorgt mit Getränken (Bier) und Snacks für das leibliche Wohl bei unseren Spielen und Anlässen.',
+      zitat: 'In heaven there is no beer, that\'s why we drink it here.'
+    },
+    {
+      id: 4,
+      name: 'Yann Hunkeler',
+      role: 'Küchenhilfe',
+      category: 'board',
+      email: '-',
+      image: '../../../assets/default-profile.png',
+      description: 'Unterstützt den Buvetten-Chef bei der Vorbereitung und Ausgabe von Snacks und Getränken während Spiele und Veranstaltungen.',
       zitat: 'In heaven there is no beer, that\'s why we drink it here.'
     }
   ];

@@ -191,11 +191,13 @@
 }
 
 .milestone-image {
-  height: 200px;
-  background-size: cover;
-  background-position: center;
+  height: 300px; /* oder min-height: 200px; */
+  background-size: cover;       /* Bild füllt das Feld komplett */
+  background-position: top center; /* zeigt den oberen Bereich, nicht zentriert */
+  background-repeat: no-repeat;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
-
 .milestone-text {
   padding: 2rem;
 }

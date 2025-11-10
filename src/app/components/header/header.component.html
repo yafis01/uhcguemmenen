@@ -1,36 +1,36 @@
 <header>
-  <div class="container">
-    <!-- LOGO LINKS -->
-    <div class="logo">
-      <img src="/assets/logo_2.PNG" alt="Logo" class="logo-img" />
-      <div>
-        <h1>UHC Gümmenen</h1>
-        <span class="tagline">Unihockey Gümmenen</span>
-      </div>
+    <div class="container">
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="/assets/logo_2.PNG" alt="Logo" class="logo-img" />
+            <div>
+                <h1>UHC Gümmenen</h1>
+                <span class="tagline">Unihockey Gümmenen</span>
+            </div>
+        </div>
+
+        <!-- BURGER MENU BUTTON -->
+        <button class="menu-toggle" (click)="toggleMenu()" [class.active]="menuOpen" aria-label="Menü umschalten">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- NAVIGATION -->
+        <nav [class.open]="menuOpen">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Startseite</a>
+            <a routerLink="/events" routerLinkActive="active" (click)="closeMenu()">Grümpelturnier 21. März 2026</a>
+            <a routerLink="/teams" routerLinkActive="active" (click)="closeMenu()">Teams</a>
+            <a routerLink="/history" routerLinkActive="active" (click)="closeMenu()">Geschichte</a>
+            <a routerLink="/officials" routerLinkActive="active" (click)="closeMenu()">Vorstand</a>
+            <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Kontakt</a>
+        </nav>
+
+        <!-- INSTAGRAM ICON -->
+        <div class="social">
+            <a href="https://www.instagram.com/uhc_gummenen" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
     </div>
-
-    <!-- MOBILE MENÜ BUTTON -->
-    <button class="menu-toggle" (click)="toggleMenu()" [class.active]="menuOpen">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- NAVIGATION -->
-    <nav [class.open]="menuOpen">
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Startseite</a>
-      <a routerLink="/events" routerLinkActive="active" (click)="closeMenu()">Grümpelturnier 21. März 2026</a>
-      <a routerLink="/teams" routerLinkActive="active" (click)="closeMenu()">Teams</a>
-      <a routerLink="/history" routerLinkActive="active" (click)="closeMenu()">Geschichte</a>
-      <a routerLink="/officials" routerLinkActive="active" (click)="closeMenu()">Vorstand</a>
-      <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Kontakt</a>
-    </nav>
-
-    <!-- INSTAGRAM ICON RECHTS -->
-    <div class="social">
-      <a href="https://www.instagram.com/uhc_gummenen" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </div>
-  </div>
 </header>

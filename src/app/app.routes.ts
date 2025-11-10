@@ -26,6 +26,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/contact/contact.component').then(m => m.ContactComponent)
   },
   {
+    path: 'success',
+    loadComponent: () => import('./shared/notification/notification.component').then(m => m.NotificationComponent)
+  },
+  {
     path: '**',
     redirectTo: ''
   }
