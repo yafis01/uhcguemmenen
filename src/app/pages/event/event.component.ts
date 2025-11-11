@@ -13,10 +13,14 @@ import { Router } from '@angular/router';
 })
 export class EventComponent implements OnInit {
   @ViewChild('formRef') formRef!: ElementRef<HTMLFormElement>;
-
   form!: FormGroup;
+  isSubmitting = false;
 
-  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {}
+  constructor(
+    private fb: FormBuilder,
+    private http: HttpClient,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -30,8 +34,14 @@ export class EventComponent implements OnInit {
 
   onSubmit(): void {
     const nativeForm = this.formRef?.nativeElement;
+
     if (nativeForm && !nativeForm.checkValidity()) {
       nativeForm.reportValidity();
+      return;
+    }
+
+    const hCaptchaResponse = (nativeForm.querySelector('textarea[name="h-captcha-response"]') as HTMLTextAreaElement)?.value;
+    if (!hCaptchaResponse) {
       return;
     }
 
@@ -39,16 +49,30 @@ export class EventComponent implements OnInit {
       this.form.markAllAsTouched();
       return;
     }
-    const jsonData = this.form.value;
-    this.http.post('https://formspree.io/f/mldarkaq', jsonData, {
-      headers: { 'Content-Type': 'application/json' }
-    }).subscribe({
-      next: () => {
-        this.form.reset();
-        setTimeout(() => this.router.navigate(['/success']), 500);
+
+    this.isSubmitting = true;
+
+    const formData = new FormData();
+    formData.append('access_key', '505ceddb-c2be-477d-8445-c76acc6e8c0b');
+    formData.append('h-captcha-response', hCaptchaResponse);
+    Object.entries(this.form.value).forEach(([key, value]) => {
+      formData.append(key, value as string);
+    });
+
+    this.http.post('https://api.web3forms.com/submit', formData).subscribe({
+      next: (response: any) => {
+        if (response.success) {
+          this.form.reset();
+          setTimeout(() => this.router.navigate(['/success']), 500);
+        } else {
+        console.error('Fehler beim Senden');
+        }
       },
       error: (err) => {
         console.error('Fehler beim Senden:', err);
+      },
+      complete: () => {
+        this.isSubmitting = false;
       }
     });
   }
