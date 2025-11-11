@@ -1,11 +1,8 @@
 <div class="officials-page">
-    <!-- Header-Bereich mit gleichem Bild -->
     <section class="page-header">
-        <div class="container-header">
-        </div>
+        <div class="container-header"></div>
     </section>
 
-    <!-- Titelbereich -->
     <section class="container section-spacing">
         <div class="category-section">
             <h2 class="category-title">Grümpelturnier 21. März 2026</h2>
@@ -17,7 +14,6 @@
         </div>
     </section>
 
-    <!-- Wichtige Infos -->
     <section class="important-info">
         <div class="container">
             <div class="info-box">
@@ -39,13 +35,12 @@
         </div>
     </section>
 
-    <!-- Formularbereich -->
     <section class="contact-section">
         <div class="container">
             <div class="contact-box">
                 <h2>Anmeldung</h2>
                 <form #formRef [formGroup]="form" class="central-form" (ngSubmit)="onSubmit()">
-                    <label for="teamName">Teamname*</label>
+                <label for="teamName">Teamname*</label>
                     <input id="teamName" type="text" formControlName="Teamname" required placeholder="Teamname">
 
                     <label for="contactPerson">Team Captain*</label>
@@ -60,11 +55,10 @@
                     <label for="note">Bemerkung</label>
                     <textarea id="note" formControlName="Bemerkung" rows="4" placeholder="Optionale Bemerkung"></textarea>
 
-                    <div class="h-captcha" data-captcha="true" data-lang="de"></div>
+                    <ng-hcaptcha formControlName="captcha"></ng-hcaptcha>
 
                     <button type="submit" class="submit-button">Jetzt anmelden</button>
                 </form>
-
             </div>
         </div>
     </section>
