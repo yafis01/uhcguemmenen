@@ -14,7 +14,7 @@ import { NgHcaptchaModule, CAPTCHA_CONFIG } from 'ng-hcaptcha';
    providers: [
       {
         provide: CAPTCHA_CONFIG,
-        useValue: { siteKey: 'a5905fcc-6762-42d6-890a-5ab0616a06c6', languageCode: 'de' }
+        useValue: { siteKey: '50b2fe65-b00b-4b9e-ad62-3ba471098be2', languageCode: 'de' }
       }
     ]
 })
