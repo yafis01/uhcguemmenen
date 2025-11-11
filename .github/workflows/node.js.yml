@@ -45,7 +45,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Lade den Ordner hoch, den dein Build-Schritt erstellt hat
-          path: 'dist/demo' 
+          path: 'dist/demo/browser' 
 
   # 2. Job: Deploy
   deploy:
