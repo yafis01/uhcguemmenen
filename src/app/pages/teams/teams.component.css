@@ -260,7 +260,7 @@
   color: #b21f1f;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .page-header h1 {
     font-size: 2rem;
   }

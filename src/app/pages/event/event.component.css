@@ -130,7 +130,7 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .category-title {
     font-size: 2rem;
   }
@@ -173,7 +173,7 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .info-box h3 {
     font-size: 1.5rem;
   }

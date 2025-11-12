@@ -253,7 +253,7 @@
   color: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .hero-content h1 {
     font-size: 2rem;
   }
