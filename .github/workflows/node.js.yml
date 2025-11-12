@@ -4,22 +4,18 @@ on:
   push:
     branches:
       - main
-  # Erlaube manuelles Starten des Workflows
   workflow_dispatch:
 
-# Setzt die Berechtigungen für den GITHUB_TOKEN
 permissions:
-  contents: read  # Nötig zum Auschecken des Codes
-  pages: write     # Nötig zum Veröffentlichen auf GitHub Pages
-  id-token: write  # Nötig für die Authentifizierung
+  contents: read
+  pages: write
+  id-token: write
 
-# Stellt sicher, dass immer nur ein Deployment läuft
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
 jobs:
-  # 1. Job: Build
   build:
     runs-on: ubuntu-latest
     steps:
@@ -35,25 +31,25 @@ jobs:
         run: npm install
 
       - name: Build Angular app
-        # WICHTIG: Die base-href ist immer noch super wichtig!
         run: npm run build -- --base-href="/"
+
+      - name: Create 404.html for GitHub Pages
+        run: cp dist/uhcguemmenen/browser/index.html dist/uhcguemmenen/browser/404.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Lade den Ordner hoch, den dein Build-Schritt erstellt hat
-          path: 'dist/demo/browser' 
+          path: 'dist/uhcguemmenen/browser'
 
-  # 2. Job: Deploy
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build # Dieser Job wartet, bis der 'build'-Job fertig ist
+    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
