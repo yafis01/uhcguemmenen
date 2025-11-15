@@ -56,9 +56,7 @@ export class EventComponent implements OnInit {
       if (key !== 'captcha') formData.append(key, value as string);
     });
 
-      this.http.post('https://api.web3forms.com/submit', formData, {
-          headers: { 'Content-Type': 'application/json' }
-      }).subscribe({
+      this.http.post('https://api.web3forms.com/submit', formData).subscribe({
           next: (response: any) => {
               if (response.success) {
                   this.form.reset();
