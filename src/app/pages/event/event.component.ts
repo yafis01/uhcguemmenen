@@ -56,21 +56,23 @@ export class EventComponent implements OnInit {
       if (key !== 'captcha') formData.append(key, value as string);
     });
 
-    this.http.post('https://api.web3forms.com/submit', formData).subscribe({
-      next: (response: any) => {
-        if (response.success) {
-          this.form.reset();
-          setTimeout(() => this.router.navigate(['/success']), 500);
-        } else {
-          console.error('Fehler beim Senden');
-        }
-      },
-      error: (err) => {
-        console.error('Fehler beim Senden:', err);
-      },
-      complete: () => {
-        this.isSubmitting = false;
-      }
-    });
+      this.http.post('https://api.web3forms.com/submit', formData, {
+          headers: { 'Content-Type': 'application/json' }
+      }).subscribe({
+          next: (response: any) => {
+              if (response.success) {
+                  this.form.reset();
+                  setTimeout(() => this.router.navigate(['/success']), 500);
+              } else {
+                  console.error('Fehler beim Senden', response);
+              }
+          },
+          error: (err) => {
+              console.error('Fehler beim Senden:', err);
+          },
+          complete: () => {
+              this.isSubmitting = false;
+          }
+      });
   }
 }
