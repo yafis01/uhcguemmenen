@@ -1,9 +1,10 @@
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import {Component, ViewChild, ElementRef, OnInit, importProvidersFrom} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { NgHcaptchaModule, CAPTCHA_CONFIG } from 'ng-hcaptcha';
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-event',
@@ -26,7 +27,8 @@ export class EventComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
-    private router: Router
+    private router: Router,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -60,12 +62,15 @@ export class EventComponent implements OnInit {
           next: (response: any) => {
               if (response.success) {
                   this.form.reset();
+                  this.toastr.success('Anmeldung erfolgreich', 'Success');
                   setTimeout(() => this.router.navigate(['/success']), 500);
               } else {
+                  this.toastr.error('Fehler bei der Anmeldung', 'Error');
                   console.error('Fehler beim Senden', response);
               }
           },
           error: (err) => {
+              this.toastr.error('Fehler beim Senden!', 'Error');
               console.error('Fehler beim Senden:', err);
           },
           complete: () => {

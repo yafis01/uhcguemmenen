@@ -28,7 +28,7 @@ export class HistoryComponent {
    {
     year: '05.09.2025',
     title: 'Pokalsieg am Seedorf Cup',
-    description: 'Ein historischer Moment - wir gewinnen das Grümpelturnier in Kappelen am 5. September 2025.',
+    description: 'Ein historischer Moment - wir gewinnen das Grümpelturnier in Seedorf am 5. September 2025.',
     image: '../../../assets/history/seedorf.jpg',
     type: 'achievement'
    },
