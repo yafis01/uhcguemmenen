@@ -21,6 +21,10 @@ export const routes: Routes = [
     path: 'officials',
     loadComponent: () => import('./pages/officials/officials.component').then(m => m.OfficialsComponent)
   },
+    {
+        path: 'infos',
+        loadComponent: () => import('./pages/info/info.component').then(m => m.InfoComponent)
+    },
   {
     path: 'contact',
     loadComponent: () => import('./pages/contact/contact.component').then(m => m.ContactComponent)
