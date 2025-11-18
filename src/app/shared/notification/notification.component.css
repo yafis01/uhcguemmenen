@@ -2,19 +2,10 @@
   width: 100%;
 }
 
-.page-header {
-  padding: 4rem 0;
-  text-align: center;
-  color: white;
-  background-image: url('../../../assets/bruecke-3.PNG');
-  background-repeat: repeat-x, no-repeat;
-  background-size: auto 100%, cover;
-  background-position: center, center;
-}
-
 .section-spacing {
   padding: 4rem 1.5rem;
 }
+
 
 .category-section {
   text-align: center;

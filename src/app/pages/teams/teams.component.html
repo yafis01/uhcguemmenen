@@ -1,15 +1,13 @@
 <div class="teams-page">
     <section class="page-header">
-    <div class="container">
-    </div>
     </section>
-    <section class="container section-spacing">
+    <section class="container">
         <div class="category-section">
             <h2 class="category-title">Teams</h2>
         </div>
     </section>
 
-  <section class="container">
+  <section class="container no-top-padding">
     <div class="teams-grid">
       <div class="team-card" *ngFor="let team of teams" (click)="selectTeam(team)" [class.active]="selectedTeam?.id === team.id">
         <div class="team-image" [style.background-image]="'url(' + team.image + ')'"></div>

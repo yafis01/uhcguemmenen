@@ -1,13 +1,12 @@
 <div class="officials-page">
   <section class="page-header">
-    <div class="container">
-    </div>
-  </section>
-
-  <section class="container section-spacing">
+      </section>
+  <section class="container">
     <div class="category-section">
       <h2 class="category-title">Vorstand</h2>
-     <!-- <p class="category-description">Unser Vorstand leitet den Verein mit strategischer Weitsicht und grossem Engagement.</p> -->
+    </div>
+  </section>
+  <section class="container no-top-padding">
       <div class="officials-grid">
         <div class="official-card" *ngFor="let official of boardMembers">
           <div class="official-image" [style.background-image]="'url(' + official.image + ')'"></div>
@@ -29,6 +28,5 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 </div>
