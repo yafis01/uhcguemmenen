@@ -30,7 +30,7 @@
 .cta-button {
   display: inline-block;
   background: white;
-  color: #1a2a6c;
+  color: #004a7c;
   padding: 1rem 2rem;
   border-radius: 50px;
   text-decoration: none;
@@ -52,7 +52,7 @@
 
 .section-header h2 {
   font-size: 2.5rem;
-  color: #1a2a6c;
+  color: #004a7c;
   position: relative;
   display: inline-block;
 }
@@ -65,7 +65,7 @@
   transform: translateX(-50%);
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #b21f1f, #fdbb2d);
+  background: linear-gradient(90deg, #005d9e, #44c1c1);
   border-radius: 2px;
 }
 
@@ -99,14 +99,14 @@
 }
 
 .news-date {
-  color: #b21f1f;
+  color: #1e1a1a;
   font-size: 0.9rem;
   font-weight: 600;
 }
 
 .news-content h3 {
   margin: 0.5rem 0;
-  color: #1a2a6c;
+  color: #1e1a1a;
   font-size: 1.3rem;
 }
 
@@ -147,7 +147,7 @@
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+  background: #005d9e;
   color: white;
   border-radius: 8px;
   min-width: 100px;
@@ -173,11 +173,11 @@
 .match-teams .team {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #1a2a6c;
+  color: #004a7c;
 }
 
 .match-teams .home {
-  color: #b21f1f;
+  color: #004a7c;
 }
 
 .match-teams .vs {
@@ -211,8 +211,8 @@
 }
 
 .info-card:hover {
-  border-color: #b21f1f;
-  box-shadow: 0 5px 20px rgba(178, 31, 31, 0.1);
+  border-color: #005d9e;
+  box-shadow: 0 5px 20px rgba(0, 93, 158, 0.1);
 }
 
 .info-icon {
@@ -221,7 +221,7 @@
 }
 
 .info-card h3 {
-  color: #1a2a6c;
+  color: #1e1a1a;
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
@@ -234,17 +234,17 @@
 
 .link-button {
   display: inline-block;
-  color: #b21f1f;
+  color: #005d9e;
   text-decoration: none;
   font-weight: 600;
   padding: 0.5rem 1.5rem;
-  border: 2px solid #b21f1f;
+  border: 2px solid #005d9e;
   border-radius: 25px;
   transition: all 0.3s ease;
 }
 
 .link-button:hover {
-  background: #b21f1f;
+  background: #005d9e;
   color: white;
 }
 

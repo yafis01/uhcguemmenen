@@ -43,11 +43,11 @@
 }
 
 .contact-link.email:hover {
-    color: #1a2a6c;
+    color: #005d9e;
 }
 
 .contact-link.phone:hover {
-    color: #b21f1f;
+    color: #005d9e;
 }
 
 
@@ -63,7 +63,7 @@
 }
 
 .contact-box h2 {
-    color: #1a2a6c;
+    color: #004a7c;
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
@@ -86,25 +86,25 @@
     padding: 1rem;
     background: #f8f8f8;
     border-radius: 10px;
-    border-left: 4px solid #b21f1f;
+    border-left: 4px solid #005d9e;
 }
 
 .contact-item strong {
     display: block;
-    color: #1a2a6c;
+    color: #004a7c;
     margin-bottom: 0.5rem;
     font-size: 0.95rem;
 }
 
 .contact-item a {
-    color: #b21f1f;
+    color: #005d9e;
     text-decoration: none;
     transition: all 0.3s ease;
     font-weight: 500;
 }
 
 .contact-item a:hover {
-    color: #1a2a6c;
+    color: #004a7c;
     text-decoration: underline;
 }
 

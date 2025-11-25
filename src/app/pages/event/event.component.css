@@ -58,21 +58,22 @@
 
 /* Button */
 .submit-button {
-  background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+  background-color: #005d9e;
   color: white;
   font-weight: 700;
   font-size: 1.1rem;
   padding: 1rem 0;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 50px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
   margin-top: 1.2rem;
 }
 
 .submit-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(178,31,31,0.3);
+  background-color: white;
+  color: #005d9e;
+  border: 1px solid #005d9e;
 }
 
 .category-description {
@@ -116,6 +117,10 @@
 
 }
 
+.contact-box h2 {
+   color: #1e1a1a;
+}
+
 .info-box ul {
   list-style: none;
   padding: 0;
@@ -151,13 +156,14 @@
   max-width: 700px;
   text-align: left;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  border-left: 6px solid #b21f1f;
+  border-left: 6px solid #005d9e;
 }
 
 .info-box h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
+  color: #1e1a1a;
 }
 
 .info-box ul {

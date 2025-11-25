@@ -9,7 +9,7 @@
 
   <section class="container no-top-padding">
     <div class="teams-grid">
-      <div class="team-card" *ngFor="let team of teams" (click)="selectTeam(team)" [class.active]="selectedTeam?.id === team.id">
+      <div class="team-card" *ngFor="let team of teams">
         <div class="team-image" [style.background-image]="'url(' + team.image + ')'"></div>
         <div class="team-info">
           <span class="team-category">{{ team.category }}</span>
@@ -18,16 +18,19 @@
           <div class="coach-info">
             <strong>Trainer:</strong> {{ team.coach }}
           </div>
-          <button class="expand-button">
-            {{ selectedTeam?.id === team.id ? 'Weniger anzeigen' : 'Kader anzeigen' }}
+          <button (click)="toggleRoster(team)" class="toggle-roster-btn">
+            {{ team.isRosterVisible ? 'Kader ausblenden' : 'Kader einblenden' }}
           </button>
         </div>
 
-        <div class="team-roster" *ngIf="selectedTeam?.id === team.id">
+        <div *ngIf="team.isRosterVisible" class="team-roster">
           <h3>Kader</h3>
           <div class="players-grid">
             <div class="player-card" *ngFor="let player of team.players">
-              <div class="player-number">{{ player.number }}</div>
+              <div class="player-image-container">
+                <img [src]="player.image || 'assets/default-profile.png'" alt="{{ player.name }}" class="player-image">
+                <div class="player-number-badge">{{ player.number }}</div>
+              </div>
               <div class="player-info">
                 <div class="player-name">{{ player.name }}</div>
                 <div class="player-position">{{ player.position }}</div>

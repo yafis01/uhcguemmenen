@@ -5,6 +5,7 @@ interface Player {
   number: number;
   name: string;
   position: string;
+  image?: string;
 }
 
 interface Team {
@@ -15,6 +16,7 @@ interface Team {
   coach: string;
   players: Player[];
   image: string;
+  isRosterVisible?: boolean;
 }
 
 @Component({
@@ -33,23 +35,22 @@ export class TeamsComponent {
       description: 'Unsere erste Herrenmannschaft ist aktuell noch nicht im aktiven Spielbetrieb beteiligt.',
       coach: 'Jan Affolter',
       image: 'https://images.pexels.com/photos/163526/field-hockey-player-girls-game-163526.jpeg?auto=compress&cs=tinysrgb&w=800',
+      isRosterVisible: true,
       players: [
         { number: 1, name: 'Joel', position: 'Torwart' },
         { number: 7, name: 'Lars', position: 'Verteidigung' },
         { number: 10, name: 'Yann', position: 'Verteidigung' },
         { number: 12, name: 'Noel', position: 'Verteidigung' },
         { number: 9, name: 'Maurice', position: 'Verteidigung' },
+        { number: 5, name: 'Jan', position: 'Verteidigung' },
         { number: 15, name: 'Cédric', position: 'Angriff' },
         { number: 18, name: 'Anis', position: 'Angriff' },
-        { number: 5, name: 'Jan', position: 'Verteidigung' },
         { number: 20, name: 'Yanis', position: 'Angriff' }
       ]
     },
   ];
 
-  selectedTeam: Team | null = null;
-
-  selectTeam(team: Team) {
-    this.selectedTeam = this.selectedTeam?.id === team.id ? null : team;
+  toggleRoster(team: Team) {
+    team.isRosterVisible = !team.isRosterVisible;
   }
 }
