@@ -34,18 +34,20 @@ export class TeamsComponent {
       category: 'Herren',
       description: 'Unsere erste Herrenmannschaft ist aktuell noch nicht im aktiven Spielbetrieb beteiligt.',
       coach: 'Jan Affolter',
-      image: 'https://images.pexels.com/photos/163526/field-hockey-player-girls-game-163526.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'assets/teams/team1.jpg',
       isRosterVisible: true,
       players: [
         { number: 1, name: 'Joel', position: 'Torwart' },
-        { number: 7, name: 'Lars', position: 'Verteidigung' },
-        { number: 10, name: 'Yann', position: 'Verteidigung' },
+        { number: 5, name: 'Lars', position: 'Verteidigung' },
+        { number: 11, name: 'Yann', position: 'Verteidigung' },
         { number: 12, name: 'Noel', position: 'Verteidigung' },
         { number: 9, name: 'Maurice', position: 'Verteidigung' },
-        { number: 5, name: 'Jan', position: 'Verteidigung' },
+        { number: 7, name: 'Jan', position: 'Verteidigung' },
+        { number: 23, name: 'Dario', position: 'Angriff' },
         { number: 15, name: 'Cédric', position: 'Angriff' },
         { number: 18, name: 'Anis', position: 'Angriff' },
-        { number: 20, name: 'Yanis', position: 'Angriff' }
+        { number: 8, name: 'Linus', position: 'Angriff' },
+        { number: 10, name: 'Yanis', position: 'Angriff' }
       ]
     },
   ];

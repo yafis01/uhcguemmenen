@@ -28,7 +28,7 @@
           <div class="players-grid">
             <div class="player-card" *ngFor="let player of team.players">
               <div class="player-image-container">
-                <img [src]="player.image || 'assets/default-profile.png'" alt="{{ player.name }}" class="player-image">
+                <img [src]="player.image || 'assets/default/default-profile.png'" alt="{{ player.name }}" class="player-image">
                 <div class="player-number-badge">{{ player.number }}</div>
               </div>
               <div class="player-info">

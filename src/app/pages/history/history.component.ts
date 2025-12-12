@@ -36,7 +36,7 @@ export class HistoryComponent {
       year: '07.10.2025',
       title: 'Erstes offizielles Training',
       description: 'Am 7. Oktober 2025 hat das erste Training in unserem neuen Spiellokal in Allenlüften stattgefunden.',
-      image: 'https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '../../../assets/history/erstes_training.png',
       type: 'development'
     },
     {
@@ -50,7 +50,7 @@ export class HistoryComponent {
 
   achievements = [
     { title: 'Grümpelturniersiege', count: 1 },
-    { title: 'Getrukene Biere', count: 523 },
+    { title: 'Getrunkene Biere', count: 523 },
     { title: 'Kaputte Schläger', count: 12 },
     { title: 'Aktive Mitglieder', count: 15 }
   ];
