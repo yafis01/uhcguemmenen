@@ -25,7 +25,7 @@ export class HomeComponent {
       title: 'Grümputurnier 25. April 2026',
       date: '25.04.2026',
       summary: 'Am 25. April 2026 findet das erste Unihockey-Grümputurnier des Gümmenen Sport-Club statt. Sei dabei!',
-      image: '../../../assets/events/turnier.png',
+      image: '../../../assets/00_GSC/grumpu_logo.PNG',
       link: '/events'
     }
   ];

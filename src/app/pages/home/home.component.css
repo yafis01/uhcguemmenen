@@ -5,16 +5,30 @@
 
 /* === HERO SECTION === */
 .hero {
-  background:
-    linear-gradient(135deg, rgba(26, 42, 108, 0.2) 0%, rgba(26, 42, 108, 0.2) 100%),
-    url('/assets/default/unihockey-home.jpg') center/cover no-repeat;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
+    background:
+            linear-gradient(
+                    135deg,
+                    rgba(200, 220, 255, 0.4),
+                    rgba(185, 210, 255, 0.4)
+            ),
+            url('/assets/00_GSC/original_logo.PNG') center center / contain no-repeat;
+
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* 👈 Text nach unten */
+    padding-bottom: 30px;  /* Abstand vom Rand */
+    text-align: center;
+    color: white;
 }
+
+.hero-text {
+    font-size: 1.1rem;
+    background: rgba(0, 0, 0, 0.35); /* Lesbarkeit */
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
 
 .hero-content h1 {
   font-size: 3rem;
@@ -73,7 +87,6 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #449fc1;
 }
 
 .news-content {

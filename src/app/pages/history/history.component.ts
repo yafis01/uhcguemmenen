@@ -50,13 +50,14 @@ export class HistoryComponent {
       year: '13.12.2025',
       title: 'Namensumbenennung',
       description: 'Der Verein wird von "Unihockey Gümmenen" zu "Gümmenen Sport-Club" umbenannt, um die vielseitige und polysportive Ausrichtung zu reflektieren.',
+      image: '../../../assets/00_GSC/original_logo.PNG',
       type: 'development'
     },
     {
       year: '25.04.2026',
       title: 'Erstes eigenes Unihockey-Grümpelturnier',
       description: 'Am 25. April 2026 organisiert der Gümmenen Sport-Club sein erstes eigenes Unihockey-Grümpelturnier in der Sport- und Freizeithalle Allenlüften.',
-      image: '../../../assets/events/turnier.png',
+      image: '../../../assets/00_GSC/grumpu_logo.PNG',
       type: 'achievement'
     }
   ];
