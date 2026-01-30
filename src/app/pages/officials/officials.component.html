@@ -1,45 +1,47 @@
 <div class="officials-page">
-  <section class="page-header">
-  </section>
-  <section class="container">
-    <div class="category-section">
-      <h2 class="category-title">Vorstand</h2>
-    </div>
-  </section>
-  <section class="container no-top-padding">
-    <div class="officials-grid">
-      <div class="official-card" *ngFor="let official of boardMembers">
-        <div class="official-image">
-          <img [src]="official.image || 'assets/default-profile.png'" alt="Foto von {{ official.name }}">
-        </div>
-        <div class="official-info">
-          <h3>{{ official.name }}</h3>
-          <div class="official-role">{{ official.role }}</div>
-          <p class="official-description">{{ official.description }}</p>
-          <i class="official-description">{{ official.zitat }}</i>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section class="page-header"></section>
 
-  <section class="container">
-    <div class="category-section">
-      <h2 class="category-title">Funktionäre</h2>
-    </div>
-  </section>
-  <section class="container no-top-padding">
-    <div class="officials-grid">
-      <div class="official-card" *ngFor="let official of functionaries">
-        <div class="official-image">
-          <img [src]="official.image || 'assets/default-profile.png'" alt="Foto von {{ official.name }}">
+    <section class="container">
+        <div class="category-section">
+            <h2 class="category-title">Vorstand</h2>
         </div>
-        <div class="official-info">
-          <h3>{{ official.name }}</h3>
-          <div class="official-role">{{ official.role }}</div>
-          <p class="official-description">{{ official.description }}</p>
-          <i class="official-description">{{ official.zitat }}</i>
+    </section>
+
+    <section class="container no-top-padding">
+        <div class="officials-grid">
+            <div class="official-card" *ngFor="let official of boardMembers">
+                <div class="official-image">
+                    <img [src]="official.image || 'assets/default-profile.png'" alt="Foto von {{ official.name }}">
+                </div>
+                <div class="official-info">
+                    <h3>{{ official.name }}</h3>
+                    <div class="official-role">{{ official.role }}</div>
+                    <p class="official-description">{{ official.description }}</p>
+                    <i class="official-description">{{ official.zitat }}</i>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="container">
+        <div class="category-section">
+            <h2 class="category-title">Funktionäre</h2>
+        </div>
+    </section>
+
+    <section class="container no-top-padding">
+        <div class="officials-grid">
+            <div class="official-card" *ngFor="let official of functionaries">
+                <div class="official-image">
+                    <img [src]="official.image || 'assets/default-profile.png'" alt="Foto von {{ official.name }}">
+                </div>
+                <div class="official-info">
+                    <h3>{{ official.name }}</h3>
+                    <div class="official-role">{{ official.role }}</div>
+                    <p class="official-description">{{ official.description }}</p>
+                    <i class="official-description">{{ official.zitat }}</i>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>

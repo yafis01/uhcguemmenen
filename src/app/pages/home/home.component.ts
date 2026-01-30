@@ -2,6 +2,15 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
+interface NewsItem {
+  id: number;
+  title: string;
+  date: string;
+  summary: string;
+  image: string;
+  link: string;
+}
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -10,25 +19,14 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  news = [
+  news: NewsItem[] = [
     {
       id: 1,
       title: 'Grümputurnier 25. April 2026',
       date: '25.04.2026',
-      summary: 'Am 25. April 2026 findet das erste Grümputurnier des Gümmenen Sport-Club (GSC) statt. Sei dabei!',
+      summary: 'Am 25. April 2026 findet das erste Unihockey-Grümputurnier des Gümmenen Sport-Club statt. Sei dabei!',
       image: '../../../assets/events/turnier.png',
       link: '/events'
-    }
-  ];
-
-  upcomingMatches = [
-    {
-      id: 1,
-      date: '2025-11-02',
-      time: '18:00',
-      home: 'FC Floorball',
-      away: 'HC Bern',
-      location: 'Sporthalle Zentrum'
     }
   ];
 }

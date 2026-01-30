@@ -4,8 +4,8 @@
         <div class="logo" routerLink="/">
             <img src="/assets/default/logo.PNG" alt="Logo" class="logo-img" />
             <div>
-                <h1>Gümmenen Sport-Club (GSC)</h1>
-                <span class="tagline">Sport-Club Gümmenen</span>
+                <h1>Gümmenen Sport-Club </h1>
+                <span class="tagline">GSC</span>
             </div>
         </div>
 
@@ -20,17 +20,20 @@
         <nav [class.open]="menuOpen">
             <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Startseite</a>
             <a routerLink="/events" routerLinkActive="active" (click)="closeMenu()">Grümpelturnier 25. April 2026</a>
-            <a routerLink="/teams" routerLinkActive="active" (click)="closeMenu()">Teams</a>
+            <a routerLink="/teams" routerLinkActive="active" (click)="closeMenu()">Aktive</a>
             <a routerLink="/history" routerLinkActive="active" (click)="closeMenu()">Geschichte</a>
             <a routerLink="/officials" routerLinkActive="active" (click)="closeMenu()">Vorstand</a>
             <a routerLink="/infos" routerLinkActive="active" (click)="closeMenu()">Infos</a>
             <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Kontakt</a>
         </nav>
 
-        <!-- INSTAGRAM ICON -->
+        <!-- SOCIAL ICONS -->
         <div class="social">
-            <a href="https://www.instagram.com/uhc_gummenen" target="_blank" aria-label="Instagram">
+            <a href="https://www.instagram.com/gummenen_sport_club" target="_blank" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@gummenen_sport_club" target="_blank" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
             </a>
         </div>
     </div>

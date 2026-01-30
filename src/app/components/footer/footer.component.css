@@ -1,30 +1,32 @@
+/* === FOOTER === */
 .footer {
-    background-color: #1a2a6c; /* Dunkles Blau */
+    background-color: #449fc1;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 1.25rem 0;
     font-size: 0.9rem;
 }
 
 .footer a {
     color: white;
     text-decoration: none;
+    transition: opacity 0.3s ease;
 }
 
 .footer a:hover {
-    text-decoration: underline;
+    opacity: 0.8;
 }
 
 .footer .social {
-    margin-top: 10px;
+    margin-top: 0.625rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer .social a {
     color: white;
-    margin: 0 5px;
     font-size: 1.2rem;
 }
 
-.footer .social a:hover {
-    color: white;
-}

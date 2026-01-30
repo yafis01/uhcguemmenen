@@ -1,16 +1,19 @@
 <div class="officials-page">
-    <section class="page-header">
-        <div class="container"></div>
-    </section>
+    <section class="page-header"></section>
 
     <section class="container">
         <div class="category-section">
             <h2 class="category-title">Grümpelturnier 25. April 2026</h2>
+            <img src="/assets/default/logo.PNG" alt="GSC Logo" class="title-logo">
             <p class="category-description">
-                Sei dabei beim allerersten Grümpelturnier des Gümmenen Sport-Club (GSC)!<br>
+                Sei dabei beim allerersten Unihockey-Grümpelturnier des Gümmenen Sport-Club !<br>
                 Dann melde dein Team ganz einfach über das untenstehende Formular an.
                 Gib den Teamnamen, den Captain und deine Kontaktdaten an – wir freuen uns auf euch!
             </p>
+            <a (click)="scrollToAnmeldung()" class="scroll-hint">
+                <i class="fas fa-arrow-down"></i>
+                <span>Zur Anmeldung</span>
+            </a>
         </div>
     </section>
 
@@ -21,6 +24,7 @@
                 <ul>
                     <li><strong>Datum:</strong> Samstag, 25. April 2026</li>
                     <li><strong>Spielbeginn:</strong> 15:00 Uhr</li>
+                    <li><strong>Anmeldeschluss: </strong><span style="text-decoration: underline;">18. April 2026</span></li>
                     <li>
                         <strong>Ort:</strong>
                         <a href="https://www.google.com/maps?q=Sport-+und+Freizeithalle+Allenlüften,+Buchstrasse+30,+3205+Gümmenen"
@@ -29,6 +33,7 @@
                         </a>
                     </li>
                     <li><strong>Teamgrösse:</strong> mind. 3 Spieler pro Team + 1 Goalie (Kleinfeld)</li>
+                    <li><strong>Mindestalter:</strong> 12 Jahre</li>
                     <li><strong>Lizenzregelung:</strong> Maximal drei Spieler dürfen eine Lizenz besitzen</li>
                     <li><strong>Startgebühr:</strong> 60 CHF pro Team (Vor Ort zu bezahlen)</li>
                 </ul>
@@ -39,9 +44,9 @@
     <section class="contact-section">
         <div class="container">
             <div class="contact-box">
-                <h2>Anmeldung</h2> <br>
+                <h2 id="anmeldung">Anmeldung</h2> <br>
                 <form #formRef [formGroup]="form" class="central-form" (ngSubmit)="onSubmit()">
-                <label for="teamName">Teamname*</label>
+                    <label for="teamName">Teamname*</label>
                     <input id="teamName" type="text" formControlName="Teamname" required placeholder="Teamname">
 
                     <label for="contactPerson">Team Captain*</label>
@@ -52,6 +57,9 @@
 
                     <label for="phone">Telefonnummer*</label>
                     <input id="phone" type="tel" formControlName="Telefon" required placeholder="Telefonnummer">
+
+                    <label for="lizenzSpieler">Anzahl lizenzierte Spieler*</label>
+                    <input id="lizenzSpieler" type="number" formControlName="LizenzSpieler" required placeholder="Anzahl lizenzierte Spieler">
 
                     <label for="note">Bemerkung</label>
                     <textarea id="note" formControlName="Bemerkung" rows="4" placeholder="Optionale Bemerkung"></textarea>

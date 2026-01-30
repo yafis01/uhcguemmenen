@@ -1,4 +1,4 @@
-import {Component, ViewChild, ElementRef, OnInit, importProvidersFrom} from '@angular/core';
+import {Component, ViewChild, ElementRef, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -37,12 +37,20 @@ export class EventComponent implements OnInit {
       Kontaktperson: ['', Validators.required],
       EMail: ['', [Validators.required, Validators.email]],
       Telefon: ['', Validators.required],
+      LizenzSpieler: [0, [Validators.required, Validators.min(0), Validators.max(3)]],
       Bemerkung: [''],
       captcha: [null, Validators.required]
     });
   }
 
-  onSubmit(): void {
+  scrollToAnmeldung() {
+    const element = document.getElementById('anmeldung');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  onSubmit() {
   const nativeForm = this.formRef?.nativeElement;
     if (nativeForm && !nativeForm.checkValidity()) {
       nativeForm.reportValidity();
@@ -65,12 +73,20 @@ export class EventComponent implements OnInit {
                   this.toastr.success('Anmeldung erfolgreich', 'Success');
                   setTimeout(() => this.router.navigate(['/success']), 500);
               } else {
-                  this.toastr.error('Fehler bei der Anmeldung', 'Error');
+                  this.toastr.error(
+                      'Fehler bei der Anmeldung. Bitte melde dich manuell per Mail an: gummenensportclub@gmail.com',
+                      'Error',
+                      { timeOut: 0, extendedTimeOut: 0, closeButton: true, tapToDismiss: false }
+                  );
                   console.error('Fehler beim Senden', response);
               }
           },
           error: (err) => {
-              this.toastr.error('Fehler beim Senden!', 'Error');
+              this.toastr.error(
+                  'Fehler beim Senden! Bitte melde dich manuell per Mail an: gummenensportclub@gmail.com',
+                  'Error',
+                  { timeOut: 0, extendedTimeOut: 0, closeButton: true, tapToDismiss: false }
+              );
               console.error('Fehler beim Senden:', err);
           },
           complete: () => {

@@ -1,6 +1,6 @@
 <div class="teams-page">
-    <section class="page-header">
-    </section>
+    <section class="page-header"></section>
+
     <section class="container">
         <div class="category-section">
             <h2 class="category-title">Teams</h2>
@@ -24,7 +24,7 @@
         </div>
 
         <div *ngIf="team.isRosterVisible" class="team-roster">
-          <h3>Kader</h3>
+          <h3>Mitglieder</h3>
           <div class="players-grid">
             <div class="player-card" *ngFor="let player of team.players">
               <div class="player-image-container">
@@ -33,12 +33,11 @@
               </div>
               <div class="player-info">
                 <div class="player-name">{{ player.name }}</div>
-                <div class="player-position">{{ player.position }}</div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+    </section>
 </div>

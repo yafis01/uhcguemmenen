@@ -1,9 +1,8 @@
 <div class="home-page">
   <section class="hero">
     <div class="hero-content">
-      <h1>Gümmenen Sport-Club (GSC)</h1>
+      <h1>Gümmenen Sport-Club</h1>
       <p>Herzlich willkommen auf der offiziellen Webseite des Sport-Clubs aus Gümmenen.</p>
-      <!-- <a routerLink="/teams" class="cta-button">Unsere Teams entdecken</a> -->
     </div>
   </section>
 
@@ -11,42 +10,15 @@
     <div class="section-header">
       <h2>Aktuelle News</h2>
     </div>
-      <article class="news-card" *ngFor="let item of news" [routerLink]="item.link" style="cursor: pointer;">
-          <div class="news-image" [style.background-image]="'url(' + item.image + ')'"></div>
-          <div class="news-content">
-              <span class="news-date">{{ item.date }}</span>
-              <h3>{{ item.title }}</h3>
-              <p>{{ item.summary }}</p>
-          </div>
-      </article>
-
-  </section>
-
-<!--
-  <section class="matches-section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Nächste Spiele</h2>
+    <article class="news-card" *ngFor="let item of news" [routerLink]="item.link">
+      <div class="news-image" [style.background-image]="'url(' + item.image + ')'"></div>
+      <div class="news-content">
+        <span class="news-date">{{ item.date }}</span>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.summary }}</p>
       </div>
-      <div class="matches-list">
-        <div class="match-card" *ngFor="let match of upcomingMatches">
-          <div class="match-date">
-            <span class="date">{{ match.date }}</span>
-            <span class="time">{{ match.time }}</span>
-          </div>
-          <div class="match-teams">
-            <span class="team home">{{ match.home }}</span>
-            <span class="vs">vs</span>
-            <span class="team away">{{ match.away }}</span>
-          </div>
-          <div class="match-location">
-            <span>{{ match.location }}</span>
-          </div>
-        </div>
-      </div>
-    </div>
+    </article>
   </section>
--->
 
   <section class="container info-section">
     <div class="info-grid">
@@ -58,8 +30,8 @@
       </div>
       <div class="info-card">
         <div class="info-icon">👥</div>
-        <h3>Teams</h3>
-        <p>Überblick über unsere Mannschaften</p>
+        <h3>Aktive</h3>
+        <p>Unsere aktiven Mitglieder</p>
         <a routerLink="/teams" class="link-button">Mehr erfahren</a>
       </div>
       <div class="info-card">

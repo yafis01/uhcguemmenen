@@ -1,3 +1,4 @@
+/* === OFFICIALS PAGE === */
 .officials-page {
   width: 100%;
 }
@@ -12,6 +13,7 @@
   margin-right: auto;
 }
 
+/* === OFFICIALS GRID === */
 .officials-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -68,43 +70,7 @@
   min-height: 60px;
 }
 
-.contact-details {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.contact-link {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  color: #333;
-  text-decoration: none;
-  padding: 0.6rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  font-size: 0.9rem;
-}
-
-.contact-link:hover {
-  background: #f8f8f8;
-  transform: translateX(5px);
-}
-
-.contact-link .icon {
-  font-size: 1.2rem;
-  width: 30px;
-  text-align: center;
-}
-
-.contact-link.email:hover {
-  color: #005d9e;
-}
-
-.contact-link.phone:hover {
-  color: #3a8dbf;
-}
-
+/* === CONTACT SECTION === */
 .contact-section {
   background: rgba(0, 93, 158, 0.05);
   padding: 0 0 4rem 0;
@@ -170,29 +136,26 @@
   color: #666;
 }
 
-@media (max-width: 1200px) {
+/* === RESPONSIVE === */
+@media (min-width: 1200px) {
   .officials-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1199px) and (min-width: 769px) {
   .officials-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .page-header h1 {
-    font-size: 2rem;
+  .officials-grid {
+    grid-template-columns: 1fr;
   }
 
   .category-title {
     font-size: 2rem;
-  }
-
-  .officials-grid {
-    grid-template-columns: 1fr;
   }
 
   .contact-box {

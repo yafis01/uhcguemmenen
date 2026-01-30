@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 interface Player {
   number: number;
   name: string;
-  position: string;
   image?: string;
 }
 
@@ -30,24 +29,28 @@ export class TeamsComponent {
   teams: Team[] = [
     {
       id: 1,
-      name: 'Herren 1',
-      category: 'Herren',
-      description: 'Unsere erste Herrenmannschaft ist aktuell noch nicht im aktiven Spielbetrieb beteiligt.',
+      name: 'Aktive',
+      category: 'Polysportives Training',
+      description: 'Wir treffen uns regelmässig zum Training.',
       coach: 'Jan Affolter',
       image: 'assets/teams/team1.jpg',
       isRosterVisible: true,
       players: [
-        { number: 1, name: 'Joel', position: 'Torwart' },
-        { number: 5, name: 'Lars', position: 'Verteidigung' },
-        { number: 11, name: 'Yann', position: 'Verteidigung' },
-        { number: 12, name: 'Noel', position: 'Verteidigung' },
-        { number: 9, name: 'Maurice', position: 'Verteidigung' },
-        { number: 7, name: 'Jan', position: 'Verteidigung' },
-        { number: 23, name: 'Dario', position: 'Angriff' },
-        { number: 15, name: 'Cédric', position: 'Angriff' },
-        { number: 18, name: 'Anis', position: 'Angriff' },
-        { number: 8, name: 'Linus', position: 'Angriff' },
-        { number: 10, name: 'Yanis', position: 'Angriff' }
+        { number: 1, name: 'Joel' },
+        { number: 5, name: 'Lars L.' },
+        { number: 10, name: 'Yann' },
+        { number: 12, name: 'Noel' },
+        { number: 7, name: 'Maurice' },
+        { number: 8, name: 'Jan A.' },
+        { number: 23, name: 'Dario' },
+        { number: 9, name: 'Cédric J.' },
+        { number: 99, name: 'Anis' },
+        { number: 4, name: 'Linus' },
+        { number: 14, name: 'Yanis' },
+        { number: 55, name: 'Cédric M.' },
+        { number: 43, name: 'Jan' },
+        { number: 8, name: 'Lars' },
+
       ]
     },
   ];

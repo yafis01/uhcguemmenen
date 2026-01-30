@@ -10,14 +10,13 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
- menuOpen = false;
+  menuOpen = false;
 
- toggleMenu() {
-   this.menuOpen = !this.menuOpen;
- }
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
 
- closeMenu() {
-   this.menuOpen = false;
- }
-
+  closeMenu(): void {
+    this.menuOpen = false;
+  }
 }

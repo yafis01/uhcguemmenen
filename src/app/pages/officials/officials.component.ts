@@ -31,21 +31,31 @@ export class OfficialsComponent {
       phone: '-',
       image: 'assets/default/default-profile.png',
       description: 'Leitet den Verein mit Engagement und sorgt für eine erfolgreiche strategische Ausrichtung.',
-      zitat: 'Make Gümmenen Sport-Club (GSC) great again.'
+      zitat: 'Make Gümmenen Sport-Club  great again.'
     },
     {
       id: 2,
+      name: 'Anis Fenni',
+      role: 'Vize-Präsident',
+      category: 'board',
+      email: '-',
+      image: 'assets/default/default-profile.png',
+      description: 'Unterstützt den Präsidenten und übernimmt Führungsaufgaben in dessen Abwesenheit.',
+      zitat: 'Teamwork makes the dream work.'
+    },
+    {
+      id: 3,
       name: 'Jan Affolter',
       role: 'Sportchef',
       category: 'board',
       email: '-',
       phone: '-',
       image: 'assets/default/default-profile.png',
-      description: 'Organisiert Training, Spiele und Turniere für alle Teams.',
+      description: 'Organisiert Training und Turniere für alle Teams.',
       zitat: 'My favorite game is the one that starts on time.'
     },
     {
-      id: 3,
+      id: 4,
       name: 'Lars Lüthi',
       role: 'Finanzen',
       category: 'board',
@@ -55,7 +65,7 @@ export class OfficialsComponent {
       zitat: 'Sorry, I ain\'t got no money, I\'m not trying to be funny.'
     },
     {
-      id: 4,
+      id: 5,
       name: 'Yanis Fischer',
       role: 'Sekretariat & Webseite',
       category: 'board',
@@ -63,6 +73,16 @@ export class OfficialsComponent {
       image: 'assets/default/default-profile.png',
       description: 'Kümmert sich um Kommunikation, Administration und Mitgliederanliegen.',
       zitat: 'Back office for success.'
+    },
+    {
+      id: 6,
+      name: 'Linus Gäumann',
+      role: 'Social Media Manager',
+      category: 'board',
+      email: '-',
+      image: 'assets/default/default-profile.png',
+      description: 'Verantwortlich für die Social-Media-Präsenz und digitale Kommunikation des Vereins.',
+      zitat: 'Content is king, but engagement is queen.'
     }
   ];
 
@@ -70,22 +90,22 @@ export class OfficialsComponent {
     {
       id: 5,
       name: 'Cédric Müller',
-      role: 'Buvette',
+      role: 'Funktionär',
       category: 'staff',
       email: '-',
       image: 'assets/default/default-profile.png',
-      description: 'Sorgt mit Getränken (Bier) und Snacks für das leibliche Wohl bei unseren Spielen und Anlässen.',
+      description: 'Unterstützt den Verein mit flexiblen Einsätzen je nach Bedarf und Situation – von der Organisation bis zur Betreuung bei Anlässen.',
       zitat: 'In heaven there is no beer, that\'s why we drink it here.'
     },
     {
       id: 6,
       name: 'Yann Hunkeler',
-      role: 'Küchenhilfe',
+      role: 'Funktionär',
       category: 'staff',
       email: '-',
       image: 'assets/default/default-profile.png',
-      description: 'Unterstützt den Buvetten-Chef bei der Vorbereitung und Ausgabe von Snacks und Getränken während Spiele und Veranstaltungen.',
-      zitat: 'You can\'t score goals on an empty stomach.'
+      description: 'Trägt mit vielseitigen Aufgaben zum Vereinsleben bei – immer da, wo Unterstützung gebraucht wird.',
+      zitat: 'Save water, drink beer.'
     }
   ];
 }
