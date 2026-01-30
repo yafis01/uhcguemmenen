@@ -38,6 +38,10 @@ header {
     font-weight: 700;
 }
 
+.line-break {
+    display: none;
+}
+
 .logo .tagline {
     font-size: 0.8rem;
     display: block;
@@ -119,6 +123,10 @@ nav a.active {
 
 /* === MOBILE DESIGN === */
 @media (max-width: 1000px) {
+    .line-break {
+        display: inline;
+    }
+
     nav {
         position: fixed;
         top: 0;
