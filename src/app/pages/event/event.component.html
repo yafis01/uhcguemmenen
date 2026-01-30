@@ -35,7 +35,7 @@
                     <li><strong>Teamgrösse:</strong> mind. 3 Spieler pro Team + 1 Goalie (Kleinfeld)</li>
                     <li><strong>Mindestalter:</strong> 12 Jahre</li>
                     <li><strong>Lizenzregelung:</strong> Maximal drei Spieler dürfen eine Lizenz besitzen</li>
-                    <li><strong>Startgebühr:</strong> 60 CHF pro Team (Vor Ort zu bezahlen)</li>
+                    <li id="anmeldung"><strong>Startgebühr:</strong> 60 CHF pro Team (Vor Ort zu bezahlen)</li>
                 </ul>
             </div>
         </div>
@@ -44,7 +44,7 @@
     <section class="contact-section">
         <div class="container">
             <div class="contact-box">
-                <h2 id="anmeldung">Anmeldung</h2> <br>
+                <h2>Anmeldung</h2> <br>
                 <form #formRef [formGroup]="form" class="central-form" (ngSubmit)="onSubmit()">
                     <label for="teamName">Teamname*</label>
                     <input id="teamName" type="text" formControlName="Teamname" required placeholder="Teamname">

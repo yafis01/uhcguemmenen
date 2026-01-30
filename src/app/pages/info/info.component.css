@@ -77,6 +77,59 @@
     font-size: 1.2rem;
 }
 
+/* Basis Disabled Button */
+.download-button.disabled {
+    position: relative;        /* wichtig für Tooltip */
+    background: #999999;
+    color: #f0f0f0;
+    pointer-events: auto;      /* wir erlauben Hover für Tooltip */
+    cursor: default;
+    box-shadow: none;
+    transform: none;
+    text-decoration: none;
+}
+
+/* Tooltip Container */
+.download-button.disabled::after {
+    content: "Coming Soon";    /* Tooltip Text */
+    position: absolute;
+    bottom: 125%;              /* über dem Button */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 0.4rem 0.7rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Pfeil nach unten für Tooltip */
+.download-button.disabled::before {
+    content: "";
+    position: absolute;
+    bottom: 115%;           /* leicht über Button */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.8) transparent transparent transparent;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Tooltip sichtbar beim Hover oder Fokus */
+.download-button.disabled:hover::after,
+.download-button.disabled:focus::after,
+.download-button.disabled:hover::before,
+.download-button.disabled:focus::before {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
 /* === CARD HEADER === */
 .card-header {
     display: flex;

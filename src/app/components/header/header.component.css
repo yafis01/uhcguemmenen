@@ -27,8 +27,8 @@ header {
 }
 
 .logo-img {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
 }
 
@@ -157,20 +157,40 @@ nav a.active {
 
     .menu-toggle {
         display: flex;
+        margin-right: 1rem;
     }
 
+    /* === SOCIAL ICONS FIXED === */
     .social {
         position: fixed;
         bottom: 2rem;
-        left: 50%;
-        transform: translateX(-50%);
-        display: none;
-        opacity: 0;
+        left: 0;
+        right: 0;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding-left: 1rem;
+        padding-right: 2rem;
+        z-index: 1000;
+
+        opacity: 0;             /* Standard unsichtbar */
+        pointer-events: none;   /* Nicht anklickbar, wenn unsichtbar */
         transition: opacity 0.4s ease;
-        z-index: 1050;
-        flex-direction: row;
-        gap: 1.5rem;
     }
+
+    .social a {
+        font-size: 2rem;
+        color: white; /* oder passende Farbe */
+    }
+
+    /* Nur anzeigen, wenn das Menü geöffnet ist */
+    .menu-open .social {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
 
     .menu-open .social {
         display: flex;
