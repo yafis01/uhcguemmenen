@@ -15,7 +15,7 @@ export class HomeComponent {
       id: 1,
       title: 'Grümputurnier 25. April 2026',
       date: '25.04.2026',
-      summary: 'Am 25. April 2026 findet das erste Grümputurnier des UHC Gümmenen statt. Sei dabei!',
+      summary: 'Am 25. April 2026 findet das erste Grümputurnier des Gümmenen Sport-Club (GSC) statt. Sei dabei!',
       image: '../../../assets/events/turnier.png',
       link: '/events'
     }

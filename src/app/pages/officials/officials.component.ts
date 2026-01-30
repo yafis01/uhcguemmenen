@@ -31,7 +31,7 @@ export class OfficialsComponent {
       phone: '-',
       image: 'assets/default/default-profile.png',
       description: 'Leitet den Verein mit Engagement und sorgt für eine erfolgreiche strategische Ausrichtung.',
-      zitat: 'Make UHC Gümmenen great again.'
+      zitat: 'Make Gümmenen Sport-Club (GSC) great again.'
     },
     {
       id: 2,

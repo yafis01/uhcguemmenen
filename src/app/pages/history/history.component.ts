@@ -21,7 +21,7 @@ export class HistoryComponent {
     {
       year: '03.09.2025',
       title: 'Vereinsgründung',
-      description: 'Am 3. September 2025 wurde der Verein "UHC Gümmenen" in Rosshäusern von drei Gründungsmitglieder gegründet.',
+      description: 'Am 3. September 2025 wurde der Verein "Gümmenen Sport-Club (GSC)" in Rosshäusern von drei Gründungsmitglieder gegründet.',
       image: '../../../assets/history/gruendung.PNG',
       type: 'foundation'
     },
