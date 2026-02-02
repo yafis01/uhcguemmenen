@@ -33,8 +33,9 @@ export const routes: Routes = [
     path: 'success',
     loadComponent: () => import('./shared/notification/notification.component').then(m => m.NotificationComponent)
   },
-  {
+{
     path: '**',
-    redirectTo: ''
-  }
+    redirectTo: '',
+    pathMatch: 'full'
+}
 ];

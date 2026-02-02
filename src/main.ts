@@ -1,6 +1,6 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
-import { provideRouter } from '@angular/router';
+import {provideRouter, withEnabledBlockingInitialNavigation} from '@angular/router';
 import { routes } from './app/app.routes';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
@@ -9,7 +9,7 @@ import {provideToastr} from "ngx-toastr";
 
 bootstrapApplication(AppComponent, {
     providers: [
-        provideRouter(routes),
+        provideRouter(routes, withEnabledBlockingInitialNavigation()),
         provideAnimations(),
         provideToastr({
             positionClass: 'toast-bottom-right',
