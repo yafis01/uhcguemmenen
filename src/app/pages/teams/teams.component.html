@@ -10,7 +10,14 @@
   <section class="container no-top-padding">
     <div class="teams-grid">
       <div class="team-card" *ngFor="let team of teams">
-        <div class="team-image" [style.background-image]="'url(' + team.image + ')'"></div>
+        <div class="team-image">
+            <ng-container *ngIf="team.image; else defaultIcon">
+                <img [src]="team.image" alt="Foto von {{ team.name }}">
+            </ng-container>
+            <ng-template #defaultIcon>
+                <i class="fa-solid fa-people-group"></i>
+            </ng-template>
+        </div>
         <div class="team-info">
           <span class="team-category">{{ team.category }}</span>
           <h2>{{ team.name }}</h2>

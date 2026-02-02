@@ -11,7 +11,12 @@
         <div class="officials-grid">
             <div class="official-card" *ngFor="let official of boardMembers">
                 <div class="official-image">
-                    <img [src]="official.image || 'assets/default-profile.png'" alt="Foto von {{ official.name }}">
+                    <ng-container *ngIf="official.image; else defaultIcon">
+                        <img [src]="official.image" alt="Foto von {{ official.name }}">
+                    </ng-container>
+                    <ng-template #defaultIcon>
+                        <i class="fa-solid fa-user"></i>
+                    </ng-template>
                 </div>
                 <div class="official-info">
                     <h3>{{ official.name }}</h3>
@@ -33,7 +38,12 @@
         <div class="officials-grid">
             <div class="official-card" *ngFor="let official of functionaries">
                 <div class="official-image">
-                    <img [src]="official.image || 'assets/default-profile.png'" alt="Foto von {{ official.name }}">
+                    <ng-container *ngIf="official.image; else defaultIcon">
+                        <img [src]="official.image" alt="Foto von {{ official.name }}">
+                    </ng-container>
+                    <ng-template #defaultIcon>
+                        <i class="fa-solid fa-user"></i>
+                    </ng-template>
                 </div>
                 <div class="official-info">
                     <h3>{{ official.name }}</h3>

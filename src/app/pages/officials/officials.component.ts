@@ -8,7 +8,7 @@ interface Official {
   category: 'board' | 'coaches' | 'staff';
   email: string;
   phone?: string;
-  image: string;
+  image?: string;
   description: string;
   zitat: string;
 }
@@ -29,7 +29,6 @@ export class OfficialsComponent {
       category: 'board',
       email: '-',
       phone: '-',
-      image: 'assets/default/default-profile.png',
       description: 'Leitet den Verein mit Engagement und sorgt für eine erfolgreiche strategische Ausrichtung.',
       zitat: 'Make Gümmenen Sport-Club  great again.'
     },
@@ -39,7 +38,6 @@ export class OfficialsComponent {
       role: 'Vize-Präsident',
       category: 'board',
       email: '-',
-      image: 'assets/default/default-profile.png',
       description: 'Unterstützt den Präsidenten und übernimmt Führungsaufgaben in dessen Abwesenheit.',
       zitat: 'Teamwork makes the dream work.'
     },
@@ -50,7 +48,6 @@ export class OfficialsComponent {
       category: 'board',
       email: '-',
       phone: '-',
-      image: 'assets/default/default-profile.png',
       description: 'Organisiert Training und Turniere für alle Teams.',
       zitat: 'My favorite game is the one that starts on time.'
     },
@@ -60,7 +57,6 @@ export class OfficialsComponent {
       role: 'Finanzen',
       category: 'board',
       email: '-',
-      image: 'assets/default/default-profile.png',
       description: 'Verantwortlich für die finanzielle Planung und eine nachhaltige Vereinsführung.',
       zitat: 'Sorry, I ain\'t got no money, I\'m not trying to be funny.'
     },
@@ -70,7 +66,6 @@ export class OfficialsComponent {
       role: 'Sekretariat & Webseite',
       category: 'board',
       email: '-',
-      image: 'assets/default/default-profile.png',
       description: 'Kümmert sich um Kommunikation, Administration und Mitgliederanliegen.',
       zitat: 'Back office for success.'
     },
@@ -80,7 +75,6 @@ export class OfficialsComponent {
       role: 'Social Media Manager',
       category: 'board',
       email: '-',
-      image: 'assets/default/default-profile.png',
       description: 'Verantwortlich für die Social-Media-Präsenz und digitale Kommunikation des Vereins.',
       zitat: 'Content is king, but engagement is queen.'
     }
@@ -93,7 +87,6 @@ export class OfficialsComponent {
       role: 'Funktionär',
       category: 'staff',
       email: '-',
-      image: 'assets/default/default-profile.png',
       description: 'Unterstützt den Verein mit flexiblen Einsätzen je nach Bedarf und Situation – von der Organisation bis zur Betreuung bei Anlässen.',
       zitat: 'In heaven there is no beer, that\'s why we drink it here.'
     },
@@ -103,7 +96,6 @@ export class OfficialsComponent {
       role: 'Funktionär',
       category: 'staff',
       email: '-',
-      image: 'assets/default/default-profile.png',
       description: 'Trägt mit vielseitigen Aufgaben zum Vereinsleben bei – immer da, wo Unterstützung gebraucht wird.',
       zitat: 'Save water, drink beer.'
     }

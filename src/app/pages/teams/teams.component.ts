@@ -14,7 +14,7 @@ interface Team {
   description: string;
   coach: string;
   players: Player[];
-  image: string;
+  image?: string;
   isRosterVisible?: boolean;
 }
 
@@ -33,7 +33,6 @@ export class TeamsComponent {
       category: 'Polysportives Training',
       description: 'Wir treffen uns regelmässig zum Training.',
       coach: 'Jan Affolter',
-      image: 'assets/teams/team1.jpg',
       isRosterVisible: true,
       players: [
         { number: 1, name: 'Joel' },
