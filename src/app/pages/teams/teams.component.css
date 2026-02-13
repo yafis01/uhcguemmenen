@@ -99,6 +99,16 @@
   border: 1px solid #005d9e;
 }
 
+.player-image-container i.fa-user {
+    width: 100%;
+    height: 100%;
+    font-size: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #004a7c;
+}
+
 /* === TEAM ROSTER === */
 .team-roster {
   padding: 2rem;

@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
             title: 'Grümpelturnier 25. April 2026',
             date: '25.04.2026',
             summary: 'Am 25. April 2026 findet das erste Unihockey-Grümpelturnier des Gümmenen Sport-Club statt. Sei dabei!',
-            image: '../../../assets/00_GSC/grumpu_logo.PNG',
+            image: '../../../assets/00_GSC/grumpu_logo_transparent.png',
             link: '/events'
         }
     ];

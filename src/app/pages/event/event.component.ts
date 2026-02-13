@@ -74,7 +74,7 @@ export class EventComponent implements OnInit {
                   setTimeout(() => this.router.navigate(['/success']), 500);
               } else {
                   this.toastr.error(
-                      'Fehler bei der Anmeldung. Bitte melde dich manuell per Mail an: gummenensportclub@gmail.com',
+                      'Fehler bei der Anmeldung. Bitte melde dich manuell per Mail an: guemmenensportclub@gmail.com',
                       'Error',
                       { timeOut: 0, extendedTimeOut: 0, closeButton: true, tapToDismiss: false }
                   );
@@ -83,7 +83,7 @@ export class EventComponent implements OnInit {
           },
           error: (err) => {
               this.toastr.error(
-                  'Fehler beim Senden! Bitte melde dich manuell per Mail an: gummenensportclub@gmail.com',
+                  'Fehler beim Senden! Bitte melde dich manuell per Mail an: guemmenensportclub@gmail.com',
                   'Error',
                   { timeOut: 0, extendedTimeOut: 0, closeButton: true, tapToDismiss: false }
               );

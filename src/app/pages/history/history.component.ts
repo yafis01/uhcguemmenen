@@ -57,7 +57,7 @@ export class HistoryComponent {
       year: '25.04.2026',
       title: 'Erstes eigenes Unihockey-Grümpelturnier',
       description: 'Am 25. April 2026 organisiert der Gümmenen Sport-Club sein erstes eigenes Unihockey-Grümpelturnier in der Sport- und Freizeithalle Allenlüften.',
-      image: '../../../assets/00_GSC/grumpu_logo.PNG',
+      image: '../../../assets/00_GSC/grumpu_logo_transparent.png',
       type: 'achievement'
     }
   ];
