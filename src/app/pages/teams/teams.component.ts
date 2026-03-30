@@ -47,8 +47,8 @@ export class TeamsComponent {
         { number: 4, name: 'Linus' },
         { number: 14, name: 'Yanis' },
         { number: 55, name: 'Cédric M.' },
-        { number: 43, name: 'Jan' },
-        { number: 8, name: 'Lars' },
+        { number: 30, name: 'Jan S.' },
+        { number: 43, name: 'Lars S.' },
 
       ]
     },
